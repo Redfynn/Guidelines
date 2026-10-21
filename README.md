@@ -73,3 +73,16 @@ To download a repo from current commit
 ---------------------
 
 https://github.com/{user}/{repo}/archive/{sha}.zip
+
+OpenMontage (video production framework)
+---------------------
+
+[OpenMontage](https://github.com/calesthio/OpenMontage) (AGPL-3.0) is included as a git submodule at `vendor/OpenMontage`, with its Claude skills in `vendor/OpenMontage/.claude/skills`.
+
+```git
+git submodule update --init vendor/OpenMontage
+cd vendor/OpenMontage
+make setup
+```
+
+Open Claude Code inside `vendor/OpenMontage` to use its skills and pipelines.
