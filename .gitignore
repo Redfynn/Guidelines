@@ -2,3 +2,4 @@
 # GHL call report output (contains customer phone numbers)
 calls.csv
 __pycache__/
+reports/
