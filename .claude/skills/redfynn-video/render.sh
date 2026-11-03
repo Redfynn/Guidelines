@@ -12,10 +12,13 @@ rm -rf "$WORK" && mkdir -p "$WORK" && cp -r "$HERE/template/." "$WORK/"
 LOGO=$(ls /root/.claude/skills/synced/*/redfynn-brand/assets/logos/RedFynn-Logo-Primary-BlackRed.png "$HERE"/../redfynn-brand/assets/logos/RedFynn-Logo-Primary-BlackRed.png 2>/dev/null | head -1 || true)
 [ -n "$LOGO" ] && cp "$LOGO" "$WORK/public/logo.png"
 
+# Optional: EXTRA_PUBLIC=<dir> copies that folder's files into the render's public/ (generated clips, stills).
+[ -n "${EXTRA_PUBLIC:-}" ] && cp -r "$EXTRA_PUBLIC/." "$WORK/public/"
+
 cd "$WORK"
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null 2>&1 || npm install --no-audit --no-fund >/dev/null
 
-BROWSER=$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell 2>/dev/null | head -1 || true)
+BROWSER=$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell 2>/dev/null | head -1 || true)
 ARGS=(); [ -n "$BROWSER" ] && ARGS+=(--browser-executable="$BROWSER")
 [ -n "$PROPS" ] && ARGS+=(--props="$PROPS")
 

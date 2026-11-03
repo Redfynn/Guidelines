@@ -1,75 +1,36 @@
-## Contributors
+# RedFynn Guidelines
 
-When starting to work on the project, make a [fork](https://help.github.com/articles/fork-a-repo/) from the Origin and have an always updated `master` copy. Before starting on a module, [branch off](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/) your local `master` and once complete, submit a pull-request.
+The source of truth for RedFynn's brand and video guidelines. If a copy elsewhere disagrees with this repo, this repo wins.
 
-## Terms
+## What is here
 
-By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law.
+| Path | What it is |
+|---|---|
+| `brand/BRAND-GUIDE.md` | The RedFynn Brand Guidelines (2024, designed by Propaganda): logo, color, type, gradients, photos, applications. |
+| `brand/WEB-IMPLEMENTATION.md`, `brand/redfynn-web.css` | Tested CSS tokens and patterns for pages, apps and tools. |
+| `brand/logos/` | The four logo PNGs. The three wordmark files have white backgrounds baked in, so use them on white only. |
+| `brand/gradients/` | Six sample gradient crops from the guide. Add the grain layer and keep black text on top. |
+| `brand/ASSETS-README.md` | What is and is not included (fonts, vector logos, reversed logos). |
+| `VIDEO-GUIDE.md` | Team guide to short branded videos. |
+| `.claude/skills/redfynn-video/` | The Claude skill and Remotion template that renders the videos. |
+| `assets/stock/` | Licensed stock footage notes. |
+| `videos/` | Rendered Inc. 5000 videos. Other renders live in the marketing repo. |
 
-## License
+## Brand at a glance
 
-[Online](https://www.yourofficehub.com/assets/legal/TermsOfService.html)
+1. Light, large type. TWK Everett in Light, Regular and Book. Size makes the hierarchy, not weight. No bold.
+2. A noisy red-orange gradient as a large background, with black type on top.
+3. Charcoal #1C1B1F and Red #ED3E25 are primary. White is secondary. Slate #4D4C4E and Smoke #D2D1D2 are for layering and rules.
+4. Pill buttons: one filled black, one outlined.
+5. Quiet structure: thin rules, small uppercase overlines, lots of white space.
 
-1. Permission is granted to temporarily download one copy of the materials (information or software) on the yourofficehub.com web site for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-	* modify or copy the materials;
-	* use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
-	* attempt to decompile or reverse engineer any software contained on the yourofficehub.com web site;
-	* remove any copyright or other proprietary notations from the materials; or
-	* transfer the materials to another person or "mirror" the materials on any other server.
-2. This license shall automatically terminate if you violate any of these restrictions and may be terminated by yourofficehub.com at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+## Open items for the brand owner
 
-## Disclaimer
+- **Gradients versus "no red backgrounds."** The 2024 guide makes the red-orange gradient the signature element. RedFynn's marketing rules retired red backgrounds in creative in August 2026 (white and black only). These conflict. Decide whether the gradient is allowed, and in which uses (contained panels, video, ads).
+- **Audience.** The 2024 guide's sample copy speaks to small business owners and says "the lowest fees in the industry." Marketing here is for payments partners, not merchants, and that line is not a cleared claim. Do not reuse the sample copy without checking the claims register.
+- **Missing files.** TWK Everett and Feeling Passionate are licensed and not included. Also missing: vector logos, reversed (transparent) logos for dark, red and gradient backgrounds, and full-resolution animated gradients.
+- **Logo animation.** The logo stays static until the brand owner says otherwise.
 
-The materials on the yourofficehub.com web site are provided "as is". yourofficehub.com makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, yourofficehub.com does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating to such materials or on any sites linked to this site.
+## History
 
-## GitHub Notes
-
-To delete the current master branch, and recreate it using origin
-----------------------
-```git
-git branch old_master
-git checkout old_master
-git push origin old_master
-git checkout master
-git reset --hard 4f2bf3170d498e3f54953d057f6b2ee293cb991e
-git pull upstream master
-```
-
-Log in to github.com, change branch to old_master.
-
-```git
-git push origin :master
-git push origin master
-```
-
-Log in to github.com, change branch to master.
-
-To update master from origin
----------------------
-
-Launch git shell
-
-```git
-git fetch upstream
-git checkout master
-git merge upstream/master
-git checkout branch-name
-git merge master
-```
-
-
-Go to branch directory
-
-To update a branch after the master have been updated from origin
-
-```git
-git checkout branch-name
-git merge master
-```
-
-If there are conflicts, simply right click the file (in GitHub for Windos) and select 'Discard file'.
-
-To download a repo from current commit
----------------------
-
-https://github.com/{user}/{repo}/archive/{sha}.zip
+The 2015 web style guides (HTML, CSS, JavaScript and PHP guides, `Style-Guide.html`, the old logo PNGs and the template README) were removed. They are in the git history before the "Replace 2015 guides with 2024 brand guidelines" commit if anyone needs them.
